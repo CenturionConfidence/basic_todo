@@ -100,7 +100,8 @@ function CreateTask() {
                 <ul className='flex justify-between mt-5'>
                   {color.map((item) => (
                     <li 
-                      className=' rounded-full w-20 h-20 flex'
+                      className={`rounded-full w-20 h-20 flex
+                          ${selectedColor === item.value ? 'border-4 border-white' : ''}`}
                       key={item.color}
                       onClick={() => handleColorSelect(item.value)}
                       style={{backgroundColor: item.value}}>
